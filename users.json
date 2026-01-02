@@ -1,0 +1,20 @@
+[
+  {
+    "Username": "admin_lib",
+    "Email": "admin@library",
+    "Password": "pass123",
+    "Assigned Role": "Admin"
+  },
+  {
+    "Username": "librarian1",
+    "Email": "lib@library.com",
+    "Password": "pass123",
+    "Assigned Role": "Librarian"
+  },
+  {
+    "Username": "student1",
+    "Email": "student@library.com",
+    "Password": "pass123",
+    "Assigned Role": "Student"
+  }
+]

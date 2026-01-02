@@ -1,0 +1,8 @@
+Username,Email,Password,Assigned Role
+admin_lib,admin@library,pass123,Admin
+librarian1,lib@library.com,pass123,Librarian
+student1,student@library.com,pass123,Student
+student2,student@library.com,pass123,Student
+student_user,student@library.com,pass123,Student
+newstudent, newstudent@test.com, pass123, Student
+newstudent,newstudent@test.com,pass123,Student

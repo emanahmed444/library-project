@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: human_security_db
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: adminpassword
+    ports:
+      - "5432:5432"
+    volumes:
+      # التعديل الأول: ده اللي هيخلي البيانات "تتحفظ" وماتتمسحش أبداً
+      - postgres_data:/var/lib/postgresql/data
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:22.0.1
+    command: start-dev
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://postgres:5432/human_security_db
+      KC_DB_USERNAME: admin
+      KC_DB_PASSWORD: adminpassword
+    ports:
+      - "8080:8080"
+    volumes:      
+      # التعديل التاني: ربط الثيم بتاعك عشان يظهر في صفحة اللوجن
+      - ./keycloak-theme:/opt/keycloak/themes/library-theme
+    depends_on:
+      - postgres
+
+# التعديل التالت: تعريف الـ Volume اللي هيشيل الداتا
+volumes:
+  postgres_data:

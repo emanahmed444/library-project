@@ -1,0 +1,98 @@
+/* تغيير خلفية الصفحة للون أزرق متدرج احترافي */
+
+
+/* تغيير خلفية الصفحة للون بني متدرج يليق بمكتبة */
+
+.login-pf body {
+    background: linear-gradient(135deg, #3e2723, #5d4037, #8d6e63) !important;
+    background-size: cover !important;
+    height: 100vh;
+    margin: 0;
+}
+
+
+/* تعديل شكل الصندوق الأبيض الخاص باللوجن */
+
+.card-pf {
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    border-top: 5px solid #3498db !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+
+/* تعديل لون الزرار */
+
+#kc-login {
+    background-color: #2980b9 !important;
+    background-image: none !important;
+    border: none !important;
+    border-radius: 5px !important;
+    font-weight: bold !important;
+}
+
+
+/* إضافة اللوجو وتنسيق العنوان ليظهر تحته */
+
+
+/* تعديل الهيدر لإظهار اللوجو فوق اسم النظام */
+
+#kc-header-wrapper {
+    /* نداء اللوجو */
+    background: url('../logo.png') no-repeat center top !important;
+    /* 1. تكبير حجم الصورة نفسها */
+    background-size: 210px !important;
+    /* 2. زيادة المساحة العلوية للنص عشان ميتداخلش مع اللوجو الكبير */
+    padding-top: 200px !important;
+    height: auto !important;
+    width: 100% !important;
+    color: white !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    text-transform: uppercase !important;
+    display: block !important;
+}
+
+
+/* حذف أي خلفيات افتراضية قد تعيق الرؤية */
+
+#kc-header {
+    background: transparent !important;
+}
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/**/
+
+
+/* تحديد عرض صندوق الدخول وجعله في المنتصف */
+
+.card-pf {
+    max-width: 450px !important;
+    /* يمكنكِ تقليل الرقم ليكون أقصر */
+    margin: 0 auto !important;
+    /* لتوسيط الصندوق أفقياً */
+    padding: 30px !important;
+    /* لإعطاء مساحة داخلية مريحة */
+    border-radius: 12px !important;
+}
+
+
+/* تنسيق خانات الإدخال لتكون متناسقة */
+
+.form-group {
+    margin-bottom: 20px !important;
+}
+
+#kc-login {
+    margin-top: 15px !important;
+}
